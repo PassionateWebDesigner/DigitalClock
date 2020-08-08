@@ -9,32 +9,35 @@
             background-color: black;
         }
         p{
-            font-size:70px;
             color:skyblue;
-            position: absolute;
-            top:15%;
-            left:30%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 180px;
+            font-size:70px;
         }
         .clock{
-            position: absolute;
-            top:55%;
-            left:50%;
-            transform: translateX(-50%) translateY(-50%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
             color: skyblue;
-            font-size: 20px;
+            font-size: 130px;
             border: 1px dashed #ccc;
-            padding:0 10px 0 10px;
-        }
-        @media (min-width:768px){
-            .clock{
-                font-size:90px;
-            }
-        }
-        @media (max-width: 768px){
+            border-width:10px;
+        } 
+        @media (max-width:768px){
             p{
-                top:25%;
-                left:10%;
-                font-size:30px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-top: 200px;
+                font-size: 30px;
+            }
+            .clock{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 50px;
             }
         }
     </style>
@@ -53,7 +56,7 @@
            if(hrs == 0){
                hrs = 12;
            }
-           if(hrs >= 12){
+           if(hrs > 12){
                hrs = hrs - 12;
                session = "PM";
            }
